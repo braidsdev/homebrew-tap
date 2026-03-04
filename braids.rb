@@ -5,21 +5,21 @@
 class Braids < Formula
   desc "Config-driven API composition — Terraform for APIs"
   homepage "https://braids.dev"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/braidsdev/braids/releases/download/v0.3.0/braids_darwin_amd64.tar.gz"
-      sha256 "46ff4902f4766c9a9155809c151dd6d564e0e0ddc8244abe96ddfa1327ae986b"
+      url "https://github.com/braidsdev/braids/releases/download/v0.4.0/braids_darwin_amd64.tar.gz"
+      sha256 "c34df39ebcdbea34c2c783e3761ba128592e663cff448cd6bfb5eefb22268337"
 
       define_method(:install) do
         bin.install "braids"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/braidsdev/braids/releases/download/v0.3.0/braids_darwin_arm64.tar.gz"
-      sha256 "77628570e446020721eeb6dc063c5c7394d6d9bbb1169ab2d99ebe817fe017b1"
+      url "https://github.com/braidsdev/braids/releases/download/v0.4.0/braids_darwin_arm64.tar.gz"
+      sha256 "bbe3a1ea1224a524b609130bf9e81b0b56ea305678cb97bf719161aed50bb9bc"
 
       define_method(:install) do
         bin.install "braids"
@@ -29,15 +29,15 @@ class Braids < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/braidsdev/braids/releases/download/v0.3.0/braids_linux_amd64.tar.gz"
-      sha256 "681fe09298bf25283d83c72331b15e5a1b978e305ef8dbe6f66c7ea1a68059a7"
+      url "https://github.com/braidsdev/braids/releases/download/v0.4.0/braids_linux_amd64.tar.gz"
+      sha256 "4d2557c3ca163782a63f72bd1154279471f66d45a9e6ccacc9aa7e7ca63e0f4d"
       define_method(:install) do
         bin.install "braids"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/braidsdev/braids/releases/download/v0.3.0/braids_linux_arm64.tar.gz"
-      sha256 "f214ba11fd343ce04df599757da4294158fa3e7867a43b9d4acca217a77a1236"
+      url "https://github.com/braidsdev/braids/releases/download/v0.4.0/braids_linux_arm64.tar.gz"
+      sha256 "e044ff0b2c13541b4becbdda6a4ade1af24b5557bc8201507faef95c9dfff50c"
       define_method(:install) do
         bin.install "braids"
       end
